@@ -56,7 +56,7 @@
       }
     }
   ],
-  "url": "https://github.com/BenTheCloudGuy/foundryvtt-alienrpg-module",
-  "manifest": "https://raw.githubusercontent.com/BenTheCloudGuy/foundryvtt-alienrpg-module/main/module.json",
-  "download": "https://github.com/BenTheCloudGuy/foundryvtt-alienrpg-module/archive/refs/heads/main.zip"
+  "url": "https://github.com/kim-nik/foundryvtt-alienrpg-module",
+  "manifest": "https://raw.githubusercontent.com/kim-nik/foundryvtt-alienrpg-module/main/module.json",
+  "download": "https://github.com/kim-nik/foundryvtt-alienrpg-module/archive/refs/heads/main.zip"
 }

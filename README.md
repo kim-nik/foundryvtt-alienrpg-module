@@ -54,7 +54,7 @@ The GM runs FoundryVTT normally on their screen. Players get a dedicated termina
 2. Paste this URL into the **Manifest URL** field at the bottom:
 
 ```
-https://raw.githubusercontent.com/BenTheCloudGuy/foundryvtt-alienrpg-module/main/module.json
+https://raw.githubusercontent.com/kim-nik/foundryvtt-alienrpg-module/main/module.json
 ```
 
 3. Click **Install**.
