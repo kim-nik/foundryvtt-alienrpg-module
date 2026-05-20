@@ -274,8 +274,8 @@
 .wy-nav-column {
   display: flex;
   flex-direction: column;
-  width: 140px;
-  min-width: 120px;
+  width: 160px;
+  min-width: 130px;
   padding: var(--wy-gap);
   gap: 4px;
   background: var(--wy-bg-panel);
@@ -305,11 +305,20 @@
   cursor: pointer;
   transition: var(--wy-transition);
   text-align: left;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
   position: relative;
   min-height: 42px;
+  height: auto;
+}
+
+.wy-nav-btn .btn-label {
+  flex: 1;
+  min-width: 0;
+  line-height: 1.25;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .wy-nav-btn .btn-icon {
@@ -336,8 +345,8 @@
 
 .wy-nav-btn.active::before {
   content: '▸';
-  position: absolute;
-  left: 2px;
+  position: static;
+  margin-right: 2px;
   color: var(--wy-green-bright);
 }
 
@@ -368,7 +377,7 @@
 }
 
 .wy-nav-label {
-  font-size: 9px;
+  font-size: 10px;
   color: var(--wy-green-dim);
   letter-spacing: 3px;
   text-transform: uppercase;

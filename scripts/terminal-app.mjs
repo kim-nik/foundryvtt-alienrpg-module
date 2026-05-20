@@ -9,6 +9,7 @@ import { MuthurBridge } from './muthur-bridge.mjs';
 import { MuthurEngine } from './muthur-engine.mjs';
 import { getShipProfile, getAvailableProfiles, SHIP_PROFILES } from './ship-profiles.mjs';
 import { TerminalSFX } from './terminal-sounds.mjs';
+import { localizeElement } from './localization.mjs';
 
 /** Well-known ID for the permanent NAV ETA timer (cannot be deleted). */
 const DEFAULT_NAV_ETA_ID = 'nav-eta-default';
@@ -64,7 +65,7 @@ export class WYTerminalApp extends Application {
     try {
       return foundry.utils.mergeObject(super.defaultOptions, {
         id: 'wy-terminal',
-        title: 'W-Y Terminal',
+        title: game.i18n.localize('WY_TERMINAL.title'),
         template: 'modules/wy-terminal/templates/terminal.hbs',
         width: game.settings.get('wy-terminal', 'terminalWidth') || w,
         height: game.settings.get('wy-terminal', 'terminalHeight') || h,
@@ -76,7 +77,7 @@ export class WYTerminalApp extends Application {
     } catch {
       return foundry.utils.mergeObject(super.defaultOptions, {
         id: 'wy-terminal',
-        title: 'W-Y Terminal',
+        title: game.i18n.localize('WY_TERMINAL.title'),
         template: 'modules/wy-terminal/templates/terminal.hbs',
         width: w,
         height: h,
@@ -157,6 +158,8 @@ export class WYTerminalApp extends Application {
   activateListeners(html) {
     super.activateListeners(html);
     const el = html[0] ?? html;
+
+    localizeElement(el);
 
     // Add GM-specific class so the window header is visible for minimize/close
     if (game.user.isGM) {
@@ -314,6 +317,7 @@ export class WYTerminalApp extends Application {
     try {
       const rendered = await renderTemplate(templatePath, data);
       contentEl.innerHTML = rendered;
+      localizeElement(contentEl);
 
       // Toggle full-height mode for views that need it (muthur chat)
       const displayFrame = contentEl.closest('#wy-display-frame') ?? contentEl.parentElement;

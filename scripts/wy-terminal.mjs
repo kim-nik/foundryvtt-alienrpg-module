@@ -114,7 +114,7 @@ Hooks.on('getSceneControlButtons', (controls) => {
 
     const toolDef = {
       name: 'wy-terminal',
-      title: 'W-Y Terminal',
+      title: game.i18n.localize('WY_TERMINAL.title'),
       icon: 'fas fa-terminal',
       button: true,
       onClick: () => toggleTerminal(),
