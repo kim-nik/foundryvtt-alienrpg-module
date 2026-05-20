@@ -2,6 +2,12 @@
 
 ![WY-Terminal](images/image.png)
 
+## Fork notes
+
+This fork adds Russian localization support and small tooling changes to make future translation work easier. The module now registers `ru`, includes `lang/ru.json`, routes module settings and static terminal UI labels through Foundry i18n, and adjusts navigation buttons so longer Russian labels can wrap cleanly.
+
+Translated so far: module settings, main terminal navigation, and many static UI labels in terminal views such as crew, cargo, logs, timers, navigation, game clock, emergency, science, weapons, and command code screens. Not translated yet: compendium packs, extracted world data, scenario/docs text, actor/journal/item content, and other campaign data.
+
 A FoundryVTT module that turns a second screen, tablet, or touch monitor into a fully interactive shipboard computer terminal for the Alien RPG. Built for in-person games where you want to put a real Weyland-Yutani interface in front of your players and let them interact with the ship directly. Green phosphor CRT display, scanlines, flicker, the works.
 
 This was built for running Chariot of the Gods but the architecture supports other Alien RPG scenarios through a plugin system.
