@@ -5,8 +5,8 @@
 export function registerSettings() {
   // Active ship profile — GM switches between ships
   game.settings.register('wy-terminal', 'activeShip', {
-    name: 'Active Ship Profile',
-    hint: 'Which ship the terminal is configured for. Changes ship identity, systems, and UI theme.',
+    name: 'WY_TERMINAL.settings.activeShip.name',
+    hint: 'WY_TERMINAL.settings.activeShip.hint',
     scope: 'world',
     config: false,  // Managed from in-terminal CONFIG
     type: String,
@@ -14,8 +14,8 @@ export function registerSettings() {
   });
 
   game.settings.register('wy-terminal', 'shipName', {
-    name: 'Ship Name',
-    hint: 'The name of the vessel displayed in the terminal.',
+    name: 'WY_TERMINAL.settings.shipName.name',
+    hint: 'WY_TERMINAL.settings.shipName.hint',
     scope: 'world',
     config: true,
     type: String,
@@ -23,8 +23,8 @@ export function registerSettings() {
   });
 
   game.settings.register('wy-terminal', 'shipClass', {
-    name: 'Ship Class',
-    hint: 'Class designation of the vessel.',
+    name: 'WY_TERMINAL.settings.shipClass.name',
+    hint: 'WY_TERMINAL.settings.shipClass.hint',
     scope: 'world',
     config: true,
     type: String,
@@ -32,8 +32,8 @@ export function registerSettings() {
   });
 
   game.settings.register('wy-terminal', 'shipRegistry', {
-    name: 'Ship Registry',
-    hint: 'Registration number of the vessel.',
+    name: 'WY_TERMINAL.settings.shipRegistry.name',
+    hint: 'WY_TERMINAL.settings.shipRegistry.hint',
     scope: 'world',
     config: true,
     type: String,
@@ -41,8 +41,8 @@ export function registerSettings() {
   });
 
   game.settings.register('wy-terminal', 'missionName', {
-    name: 'Mission Name',
-    hint: 'Current mission designation.',
+    name: 'WY_TERMINAL.settings.missionName.name',
+    hint: 'WY_TERMINAL.settings.missionName.hint',
     scope: 'world',
     config: true,
     type: String,
@@ -50,8 +50,8 @@ export function registerSettings() {
   });
 
   game.settings.register('wy-terminal', 'muthurUrl', {
-    name: 'MU/TH/UR Server URL',
-    hint: 'URL where the MuthurGPT web interface is accessible (leave blank for built-in chat).',
+    name: 'WY_TERMINAL.settings.muthurUrl.name',
+    hint: 'WY_TERMINAL.settings.muthurUrl.hint',
     scope: 'world',
     config: true,
     type: String,
@@ -59,8 +59,8 @@ export function registerSettings() {
   });
 
   game.settings.register('wy-terminal', 'statusPath', {
-    name: 'Status File Path',
-    hint: 'Path to the ship status JSON files within the Foundry data directory.',
+    name: 'WY_TERMINAL.settings.statusPath.name',
+    hint: 'WY_TERMINAL.settings.statusPath.hint',
     scope: 'world',
     config: true,
     type: String,
@@ -68,8 +68,8 @@ export function registerSettings() {
   });
 
   game.settings.register('wy-terminal', 'scanlines', {
-    name: 'CRT Scanlines',
-    hint: 'CRT scanline overlay intensity (OFF / LIGHT / MEDIUM / HEAVY).',
+    name: 'WY_TERMINAL.settings.scanlines.name',
+    hint: 'WY_TERMINAL.settings.scanlines.hint',
     scope: 'world',
     config: false,
     type: String,
@@ -77,8 +77,8 @@ export function registerSettings() {
   });
 
   game.settings.register('wy-terminal', 'crtFlicker', {
-    name: 'CRT Flicker',
-    hint: 'CRT flicker animation intensity (OFF / LIGHT / MEDIUM / HEAVY).',
+    name: 'WY_TERMINAL.settings.crtFlicker.name',
+    hint: 'WY_TERMINAL.settings.crtFlicker.hint',
     scope: 'world',
     config: false,
     type: String,
@@ -86,8 +86,8 @@ export function registerSettings() {
   });
 
   game.settings.register('wy-terminal', 'soundEnabled', {
-    name: 'Terminal Sound Effects',
-    hint: 'Enable terminal beep and keyboard sounds.',
+    name: 'WY_TERMINAL.settings.soundEnabled.name',
+    hint: 'WY_TERMINAL.settings.soundEnabled.hint',
     scope: 'client',
     config: true,
     type: Boolean,
@@ -95,8 +95,8 @@ export function registerSettings() {
   });
 
   game.settings.register('wy-terminal', 'terminalWidth', {
-    name: 'Terminal Width',
-    hint: 'Width of the terminal window in pixels (Normal mode only — ignored in Terminal Display mode).',
+    name: 'WY_TERMINAL.settings.terminalWidth.name',
+    hint: 'WY_TERMINAL.settings.terminalWidth.hint',
     scope: 'client',
     config: true,
     type: Number,
@@ -104,8 +104,8 @@ export function registerSettings() {
   });
 
   game.settings.register('wy-terminal', 'terminalHeight', {
-    name: 'Terminal Height',
-    hint: 'Height of the terminal window in pixels (Normal mode only — ignored in Terminal Display mode).',
+    name: 'WY_TERMINAL.settings.terminalHeight.name',
+    hint: 'WY_TERMINAL.settings.terminalHeight.hint',
     scope: 'client',
     config: true,
     type: Number,
@@ -207,8 +207,8 @@ export function registerSettings() {
      ════════════════════════════════════════════════════════════════ */
 
   game.settings.register('wy-terminal', 'openaiBaseUrl', {
-    name: 'API Base URL',
-    hint: 'OpenAI-compatible API base URL. OpenAI: https://api.openai.com/v1 — Local Ollama: http://localhost:11434/v1',
+    name: 'WY_TERMINAL.settings.openaiBaseUrl.name',
+    hint: 'WY_TERMINAL.settings.openaiBaseUrl.hint',
     scope: 'world',
     config: true,
     type: String,
@@ -216,8 +216,8 @@ export function registerSettings() {
   });
 
   game.settings.register('wy-terminal', 'openaiApiKey', {
-    name: 'API Key',
-    hint: 'API key for MU/TH/UR AI responses. Required for OpenAI. Leave blank for local Ollama (no auth needed).',
+    name: 'WY_TERMINAL.settings.openaiApiKey.name',
+    hint: 'WY_TERMINAL.settings.openaiApiKey.hint',
     scope: 'world',
     config: true,
     type: String,
@@ -225,8 +225,8 @@ export function registerSettings() {
   });
 
   game.settings.register('wy-terminal', 'openaiModel', {
-    name: 'AI Model',
-    hint: 'Model name to use (e.g. gpt-4o-mini, gpt-4.1-nano, llama3.1:8b, mistral:7b).',
+    name: 'WY_TERMINAL.settings.openaiModel.name',
+    hint: 'WY_TERMINAL.settings.openaiModel.hint',
     scope: 'world',
     config: true,
     type: String,
@@ -234,17 +234,17 @@ export function registerSettings() {
   });
 
   game.settings.register('wy-terminal', 'muthurPlugin', {
-    name: 'MU/TH/UR Scenario Plugin',
-    hint: 'Which scenario/ship plugin to load for MU/TH/UR prompts and configuration.',
+    name: 'WY_TERMINAL.settings.muthurPlugin.name',
+    hint: 'WY_TERMINAL.settings.muthurPlugin.hint',
     scope: 'world',
     config: true,
     type: String,
     default: 'cronus',
     choices: {
-      montero: 'USCSS Montero',
-      cronus: 'USCSS Cronus',
-      cronus_life_support: 'USCSS Cronus (Life Support)',
-      fort_nebraska: 'Fort Nebraska',
+      montero: 'WY_TERMINAL.settings.muthurPlugin.choices.montero',
+      cronus: 'WY_TERMINAL.settings.muthurPlugin.choices.cronus',
+      cronus_life_support: 'WY_TERMINAL.settings.muthurPlugin.choices.cronusLifeSupport',
+      fort_nebraska: 'WY_TERMINAL.settings.muthurPlugin.choices.fortNebraska',
     },
   });
 
